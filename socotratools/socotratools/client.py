@@ -1,3 +1,4 @@
+from __future__ import print_function
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 import sys
@@ -17,9 +18,9 @@ class SocotraClient:
     def __debug(self, string):
         if self.debug:
             if type(string) == dict:
-                print json.dumps(string)
+                print(json.dumps(string))
             else:
-                print string
+                print(string)
 
     # Used for permissions
     def is_allowed(self, method_name):
